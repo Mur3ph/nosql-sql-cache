@@ -1,0 +1,46 @@
+-- Describe the object in detail (i.e. Columns data types)
+DESC COUNTRIES;
+DESC DEPARTMENTS;
+DESC EMPLOYEES;
+DESC JOB_HISTORY;
+DESC JOBS;
+DESC LOCATIONS;
+DESC REGIONS;
+
+-- Display details of jobs where the minimum salary is greater than 10000 ?
+DESC JOBS;
+
+SELECT JOB_ID , JOB_TITLE , MIN_SALARY , MAX_SALARY  
+FROM JOBS 
+WHERE MIN_SALARY > 10000;
+
+--Display the first name and join date of the employees who joined between 2002 and 2005 ?
+
+-- Mine
+DESC EMPLOYEES;
+
+SELECT FIRST_NAME, HIRE_DATE
+FROM EMPLOYEES
+WHERE HIRE_DATE BETWEEN TO_DATE('1.1.' || 2002, 'DD.MM.YYYY') 
+AND TO_DATE('1.1.' || 2005, 'DD.MM.YYYY')
+ORDER BY HIRE_DATE;
+
+-- Other guy
+SELECT FIRST_NAME, HIRE_DATE 
+FROM EMPLOYEES 
+WHERE TO_CHAR(HIRE_DATE, 'YYYY') BETWEEN 2002 AND 2005 
+ORDER BY HIRE_DATE;
+
+-- Display first name and join date of the employees who is either IT Programmer or Sales Manager ?
+-- Mine
+SELECT JOB_ID FROM EMPLOYEES;
+
+SELECT FIRST_NAME, HIRE_DATE
+FROM EMPLOYEES
+WHERE JOB_ID = 'IT_PROG'
+OR JOB_ID = 'SA_MAN';
+
+-- Other guy
+SELECT FIRST_NAME, HIRE_DATE
+FROM EMPLOYEES 
+WHERE JOB_ID IN ('IT_PROG', 'SA_MAN');
