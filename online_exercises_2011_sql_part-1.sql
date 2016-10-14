@@ -44,3 +44,15 @@ OR JOB_ID = 'SA_MAN';
 SELECT FIRST_NAME, HIRE_DATE
 FROM EMPLOYEES 
 WHERE JOB_ID IN ('IT_PROG', 'SA_MAN');
+
+-- Display employees who joined after 1st January 2008
+-- Mine
+SELECT FIRST_NAME, LAST_NAME, HIRE_DATE
+FROM EMPLOYEES
+WHERE HIRE_DATE > TO_DATE('1.1.' || 2008, 'DD.MM.YYYY');
+
+-- Other guy
+SELECT * 
+FROM EMPLOYEES  
+where hire_date > '01-jan-2008';
+
