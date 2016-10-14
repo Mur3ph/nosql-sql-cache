@@ -58,6 +58,9 @@ FROM EMPLOYEES
 where hire_date > '01-jan-2008';
 
 -- Display details of employee with ID 150 or 160 ?
+-- If the values are constant 'IN' sorts the list and then uses a binary search. 
+-- I would imagine that 'OR' evaluates them one by one in no particular order. 
+-- So 'IN' is faster in some circumstances
 DESC EMPLOYEES;
 SELECT FIRST_NAME, LAST_NAME, EMPLOYEE_ID
 FROM EMPLOYEES
