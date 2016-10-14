@@ -45,8 +45,9 @@ SELECT FIRST_NAME, HIRE_DATE
 FROM EMPLOYEES 
 WHERE JOB_ID IN ('IT_PROG', 'SA_MAN');
 
--- Display employees who joined after 1st January 2008
+-- Display employees who joined after 1st January 2008 ?
 -- Mine
+DESC EMPLOYEES;
 SELECT FIRST_NAME, LAST_NAME, HIRE_DATE
 FROM EMPLOYEES
 WHERE HIRE_DATE > TO_DATE('1.1.' || 2008, 'DD.MM.YYYY');
@@ -56,3 +57,8 @@ SELECT *
 FROM EMPLOYEES  
 where hire_date > '01-jan-2008';
 
+-- Display details of employee with ID 150 or 160 ?
+DESC EMPLOYEES;
+SELECT FIRST_NAME, LAST_NAME, EMPLOYEE_ID
+FROM EMPLOYEES
+WHERE EMPLOYEE_ID IN(150, 160);
