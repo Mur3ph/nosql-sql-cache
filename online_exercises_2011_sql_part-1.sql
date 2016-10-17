@@ -71,3 +71,21 @@ DESC EMPLOYEES;
 SELECT FIRST_NAME, SALARY, COMMISSION_PCT, HIRE_DATE
 FROM EMPLOYEES
 WHERE SALARY < 10000;
+
+-- Display job Title, the difference between minimum and maximum salaries for jobs with max salary in the range 10000 to 20000 ?
+-- Mine
+DESC EMPLOYEES;
+DESC JOBS;
+SELECT j.JOB_TITLE, (j.MAX_SALARY - j.MIN_SALARY) AS Max_Min_Salary_Difference
+FROM JOBS j
+WHERE j.MAX_SALARY BETWEEN 10000 AND 20000
+ORDER BY Max_Min_Salary_Difference ASC;
+-- ORDER BY Max_Min_Salary_Difference DESC;
+
+-- Other
+SELECT JOB_TITLE, MAX_SALARY-MIN_SALARY DIFFERENCE 
+FROM JOBS 
+WHERE MAX_SALARY BETWEEN 10000 AND 20000;
+
+-- Display first name, salary, and round the salary to thousands ?
+
