@@ -82,10 +82,6 @@ WHERE j.MAX_SALARY BETWEEN 10000 AND 20000
 ORDER BY Max_Min_Salary_Difference ASC;
 -- ORDER BY Max_Min_Salary_Difference DESC;
 
--- Other
-SELECT JOB_TITLE, MAX_SALARY-MIN_SALARY DIFFERENCE 
-FROM JOBS 
-WHERE MAX_SALARY BETWEEN 10000 AND 20000;
-
 -- Display first name, salary, and round the salary to thousands ?
+
 
