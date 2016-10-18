@@ -7,6 +7,19 @@ DESC JOBS;
 DESC LOCATIONS;
 DESC REGIONS;
 
+-- Show User Indexes
+SELECT INDEX_NAME, TABLE_OWNER, TABLE_NAME, UNIQUENESS 
+FROM USER_INDEXES;
+
+-- Show All Indexes
+SELECT INDEX_NAME, TABLE_OWNER, TABLE_NAME, UNIQUENESS 
+FROM ALL_INDEXES;
+
+-- Find indexes on a Table, only works on Constraints
+SELECT *
+FROM user_cons_columns
+WHERE table_name = 'JOBS';
+
 -- Display details of jobs where the minimum salary is greater than 10000 ?
 DESC JOBS;
 
@@ -86,4 +99,13 @@ ORDER BY Max_Min_Salary_Difference ASC;
 SELECT FIRST_NAME, SALARY, ROUND(SALARY, -3) AS Salary_Rounded
 FROM EMPLOYEES
 ORDER BY Salary_Rounded DESC;
+
+-- Display details of jobs in the descending order of the title ?
+DESC JOBS;
+SELECT JOB_ID, JOB_TITLE, MIN_SALARY, MAX_SALARY
+FROM JOBS
+ORDER BY JOB_TITLE DESC;
+
+
+
 
