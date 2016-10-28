@@ -69,3 +69,15 @@ FROM JOBS;
 
 -- Other guy
 SELECT JOB_TITLE,  SUBSTR(JOB_TITLE,1, INSTR(JOB_TITLE, ' ')-1) FROM JOBS;
+
+-- 8). Display the length of first name for employees where last name contain character ‘b’ after 3rd position ? 
+
+-- Mine
+SELECT FIRST_NAME, LENGTH(FIRST_NAME) AS LENGTH_OF_FIRST_NAME, LAST_NAME
+FROM EMPLOYEES
+WHERE UPPER(SUBSTR(LAST_NAME, 1, 3)) LIKE '%B%';
+
+-- Other guy - NOT WORKING
+SELECT FIRST_NAME, LAST_NAME 
+FROM EMPLOYEES 
+WHERE INSTR(LAST_NAME,'B') > 3;
