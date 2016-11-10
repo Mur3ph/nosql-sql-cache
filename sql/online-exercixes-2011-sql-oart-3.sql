@@ -75,6 +75,11 @@ WHERE TO_CHAR(HIRE_DATE,'DD') >= 15;
 
 -- 6). Display the country ID and number of cities we have in the country ?
 
+    -- COUNT(*) counts all rows
+    -- COUNT(column) counts non-NULLs only
+    -- COUNT(1) is the same as COUNT(*) because 1 is a non-null expressions
+    -- The use of COUNT(*) or COUNT(column) should be based on the desired output only
+
 SELECT COUNTRY_ID, COUNT(CITY)
 FROM LOCATIONS
 GROUP BY COUNTRY_ID;
