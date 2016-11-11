@@ -94,7 +94,7 @@ INNER JOIN LOCATIONS l ON
 c.COUNTRY_ID = l.COUNTRY_ID
 GROUP BY c.COUNTRY_ID;
 
--- 7). Display average salary of employees in each department who have commission percentage ? 
+-- 7). Display the average salary of employees, in each department, who have a commission percentage ? 
 SELECT FIRST_NAME, LAST_NAME, AVG(SALARY)
 FROM EMPLOYEES
 GROUP BY FIRST_NAME, LAST_NAME;
