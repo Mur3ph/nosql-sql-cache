@@ -70,7 +70,8 @@
 11. [Microsoft Database training for beginners] (https://mva.microsoft.com/en-US/training-courses/database-fundamentals-8243?l=TEBiexJy_5904984382)
 12. [Query Tuning 101] (https://blogs.oracle.com/sql/entry/query_tuning_101_comparing_execution?utm_content=buffer88039&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)
 13. [7 Best Tools for Network Administration] (https://blogs.oracle.com/sql/entry/query_tuning_101_comparing_execution?utm_content=buffer88039&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)
- 
+14. [HR Schema SQL and PLSQL questions] (http://www.srikanthtechnologies.com/oracle/dec9/hrqueries.html)
+
 
 ## Books:
 
