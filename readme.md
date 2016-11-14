@@ -71,7 +71,7 @@
 12. [Query Tuning 101] (https://blogs.oracle.com/sql/entry/query_tuning_101_comparing_execution?utm_content=buffer88039&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)
 13. [7 Best Tools for Network Administration] (https://blogs.oracle.com/sql/entry/query_tuning_101_comparing_execution?utm_content=buffer88039&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)
 14. [HR Schema SQL and PLSQL questions] (http://www.srikanthtechnologies.com/oracle/dec9/hrqueries.html)
-
+15. [Oracle Application Express (Build applications using only your web browser)] (https://apex.oracle.com/en/)
 
 ## Books:
 
@@ -90,6 +90,9 @@
 13. [Oracle documents]	
 
 
+## Video:
+
+1. [Tour the Oracle Dev Gym] (https://www.youtube.com/watch?v=FbHP7usHtzA)
 
 
 
