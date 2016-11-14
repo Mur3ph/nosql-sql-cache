@@ -125,3 +125,14 @@ SELECT DEPARTMENT_ID, AVG(SALARY)
 FROM EMPLOYEES 
 WHERE COMMISSION_PCT IS NOT NULL 
 GROUP BY DEPARTMENT_ID;
+
+-- 8). Display job ID, number of employees, sum of salary, and difference between highest salary and lowest salary of the employees of the job ?
+SELECT e.JOB_ID, COUNT(e.EMPLOYEE_ID), SUM(e.SALARY) AS TOTAL_SALARY, SUM(j.MAX_SALARY - j.MIN_SALARY) AS SALARY_DIFFERENCE
+FROM EMPLOYEES e
+INNER JOIN JOBS j 
+ON e.JOB_ID = j.JOB_ID
+GROUP BY e.JOB_ID;
+
+SELECT JOB_ID, COUNT(EMPLOYEE_ID) AS Number_Of_Employees, SUM(SALARY) AS Total_Salary, MAX(SALARY)-MIN(SALARY) AS Salary_Difference
+FROM EMPLOYEES 
+GROUP BY JOB_ID;
