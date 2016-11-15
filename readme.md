@@ -89,5 +89,10 @@
 4. [Guy Harrison: Lecture 5 Oracle Database Performance Tuning 1] (https://www.youtube.com/watch?v=Ah1xjCl6Axg&index=9&list=PL070EB064AA22053F)
 5. [Oracle DBA Girl: Road to becoming an Oracle DBA] (https://www.youtube.com/watch?v=CfV2BUXPPcw&list=PLa6d4MyZlN5kEDluaHe4kMn0rvem-S3lX)
 6. [Oracle Coach] (https://www.youtube.com/user/oraclecoach/playlists)
-
+7. [The Magic of SQL] (https://www.youtube.com/channel/UCWeOtlakw8g01MrR8U4yYtg/playlists)
+8. [Oracle DBA Justin] (https://www.youtube.com/watch?v=28E37BUX6o8&index=8&list=PLMNHKeH57OwAxTDi25giHkLxzFlUbeXOE)
+9. [Steven Feuerstein: Practically Perfect PL/SQL] (https://www.youtube.com/channel/UCpJpLMRm452kVcie3RpINPw/playlists)
+10. [Oracle Learning Streams] (https://www.youtube.com/user/oraclelearningstream/playlists)
+11. [Oracle Learning Library] (https://www.youtube.com/user/OracleLearning/playlists)
+12. [OTN Database Community] (https://www.youtube.com/user/OTNDatabasechannel/videos)
 
