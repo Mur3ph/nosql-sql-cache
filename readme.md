@@ -1,44 +1,36 @@
 # Oracle Personal Training
 
-##SQL*Plus commands:
+## Command Line commands:
 
 1. Connect to Oracle SQL*PLUS threw windows command line type: 
   * sqlplus
+  
   
 2. Stop and Start Orace database server:
   * net stop OracleServiceXE
   * net start OracleServiceXE
 
-3. Unlock HR user account:
+  
+3. Unlock HR user account on Oracle CLI:
   * ALTER USER hr IDENTIFIED BY hr ACCOUNT UNLOCK;
 
+  
 ## SQL Scripts
 
 1. Describe the object in detail (i.e. Columns data types)
   * DESC COUNTRIES;
-  * DESC DEPARTMENTS;
-  * DESC EMPLOYEES;
-  * DESC JOB_HISTORY;
-  * DESC JOBS;
-  * DESC LOCATIONS;
-  * DESC REGIONS;
-'
+
 
 2. Show User Indexes
   * SELECT INDEX_NAME, TABLE_OWNER, TABLE_NAME, UNIQUENESS FROM USER_INDEXES;
 
+  
 3. Show All Indexes
   * SELECT INDEX_NAME, TABLE_OWNER, TABLE_NAME, UNIQUENESS FROM ALL_INDEXES;
 
+  
 4. Find indexes on a Table, only works on Constraints
   * SELECT * FROM user_cons_columns WHERE table_name = 'JOBS';
-
-  
-5. Working with dates:
-  * SELECT TO_CHAR(HIRE_DATE,'mon')  FROM EMPLOYEES;
-  * SELECT TO_CHAR(HIRE_DATE,'month')  FROM EMPLOYEES;
-  * SELECT TO_CHAR(HIRE_DATE,'MON')  FROM EMPLOYEES;
-  * SELECT TO_CHAR(HIRE_DATE,'MONTH')  FROM EMPLOYEES;
 
 
 ## PL/SQL Scripts
@@ -66,12 +58,11 @@
 7. [Say NO to Venn Diagrams When Explaining JOINs] (https://blog.jooq.org/2016/07/05/say-no-to-venn-diagrams-when-explaining-joins/)
 8. [How To Use ps, kill, and nice to Manage Processes in Linux] (https://www.digitalocean.com/community/tutorials/how-to-use-ps-kill-and-nice-to-manage-processes-in-linux?utm_content=bufferd2197&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)
 9. [Linux file system hierarchy] (https://www.blackmoreops.com/2015/06/18/linux-file-system-hierarchy-v2-0/)
-10. [Basic Materialized Views] (http://docs.oracle.com/database/121/DWHSG/basicmv.htm#DWHSG008)
-11. [Microsoft Database training for beginners] (https://mva.microsoft.com/en-US/training-courses/database-fundamentals-8243?l=TEBiexJy_5904984382)
-12. [Query Tuning 101] (https://blogs.oracle.com/sql/entry/query_tuning_101_comparing_execution?utm_content=buffer88039&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)
-13. [7 Best Tools for Network Administration] (https://blogs.oracle.com/sql/entry/query_tuning_101_comparing_execution?utm_content=buffer88039&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)
-14. [HR Schema SQL and PLSQL questions] (http://www.srikanthtechnologies.com/oracle/dec9/hrqueries.html)
-15. [Oracle Application Express (Build applications using only your web browser)] (https://apex.oracle.com/en/)
+10. [Microsoft Database training for beginners] (https://mva.microsoft.com/en-US/training-courses/database-fundamentals-8243?l=TEBiexJy_5904984382)
+11. [Query Tuning 101] (https://blogs.oracle.com/sql/entry/query_tuning_101_comparing_execution?utm_content=buffer88039&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)
+12. [7 Best Tools for Network Administration] (https://blogs.oracle.com/sql/entry/query_tuning_101_comparing_execution?utm_content=buffer88039&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)
+13. [HR Schema SQL and PLSQL questions] (http://www.srikanthtechnologies.com/oracle/dec9/hrqueries.html)
+14. [Oracle Application Express (Build applications using only your web browser)] (https://apex.oracle.com/en/)
 
 ## Books:
 
@@ -93,6 +84,10 @@
 ## Video:
 
 1. [Tour the Oracle Dev Gym] (https://www.youtube.com/watch?v=FbHP7usHtzA)
-
+2. [Basic Materialized Views] (http://docs.oracle.com/database/121/DWHSG/basicmv.htm#DWHSG008)
+3. [Dr. Daniel Soper: Database Lessons 1-8] (https://www.youtube.com/watch?v=Xk3cgUdoieU)
+4. [Guy Harrison: Lecture 5 Oracle Database Performance Tuning 1] (https://www.youtube.com/watch?v=Ah1xjCl6Axg&index=9&list=PL070EB064AA22053F)
+5. [Oracle DBA Girl: Road to becoming an Oracle DBA] (https://www.youtube.com/watch?v=CfV2BUXPPcw&list=PLa6d4MyZlN5kEDluaHe4kMn0rvem-S3lX)
+6. [Oracle Coach] (https://www.youtube.com/user/oraclecoach/playlists)
 
 
