@@ -136,3 +136,24 @@ GROUP BY e.JOB_ID;
 SELECT JOB_ID, COUNT(EMPLOYEE_ID) AS Number_Of_Employees, SUM(SALARY) AS Total_Salary, MAX(SALARY)-MIN(SALARY) AS Salary_Difference
 FROM EMPLOYEES 
 GROUP BY JOB_ID;
+
+-- 9). Display job ID for jobs with average salary more than 10000 ?
+
+-- To use aggregate functions (like SUM/AVERAGE etc.,) you need to group the results using the GROUP BY clause. 
+-- To filter results based on the aggregation on a column, you should perform a GROUP BY on the selected columns, 
+-- and then use the HAVING clause to specify the filter
+
+SELECT e.JOB_ID, e.SALARY, av.Average_Salary
+FROM (SELECT AVG(e.SALARY) AS Average_Salary
+      FROM EMPLOYEES e
+      GROUP BY e.JOB_ID) av, EMPLOYEES e
+WHERE e.SALARY > av.Average_Salary;
+
+SELECT JOB_ID, AVG(SALARY) 
+FROM EMPLOYEES 
+GROUP BY JOB_ID 
+HAVING AVG(SALARY) > 10000;
+
+
+
+
