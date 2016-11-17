@@ -96,3 +96,29 @@
 11. [Oracle Learning Library] (https://www.youtube.com/user/OracleLearning/playlists)
 12. [OTN Database Community] (https://www.youtube.com/user/OTNDatabasechannel/videos)
 
+
+## Certification:
+
+1. [Oracle Database 12c Associate] (https://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=654&get_params=p_id:248&p_org_id=1001&lang=US#tabs-1)
+  * [Oracle Database 12c: SQL Fundamentals] (http://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=5001&get_params=p_exam_id:1Z0-061) 
+  * [Oracle Database 12c Administration] (http://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=5001&get_params=p_exam_id:1Z0-075)
+2. SAP HANA
+  * [Video: Certification Overview] (https://www.youtube.com/watch?v=GZa0GXwE9Mc)
+  * [SAP Certified Technology Associate - SAP HANA (Edition 2015)] (https://training.sap.com/shop/certification/c_hanatec151-sap-certified-technology-associate---sap-hana-edition-2015-g/)
+  * [SAP Certified Technology Specialist - SAP HANA Installation] (https://training.sap.com/shop/certification/e_hanains151-sap-certified-technology-specialist---sap-hana-installation-edition-2015-g/)
+  * [Training] (http://www.itconductor.com/blog/what-i-learned-completing-3-sap-hana-certification-exams-in-10-days)
+3. MCSA: SQL Server 
+  * [SQL Server Associate Certificate and training] (https://www.microsoft.com/en-us/learning/mcsa-sql-2016-certification.aspx) 
+4. NoSQL database
+  * MongoDB
+    * [MongoDB Certified Developer Associate Exam] (https://university.mongodb.com/certification/developer/about)
+	* [MongoDB Certified DBA Associate Exam] (https://university.mongodb.com/certification/dba/about)
+  * Neo4j
+    * [Neo4j Certification] (https://neo4j.com/graphacademy/neo4j-certification/)
+    * [Neo4j: Udemy] (https://www.udemy.com/neo4j_beginners1/)
+	* [Neo4j Reference Card] (http://neo4j.com/docs/cypher-refcard/current/)
+5. Hadoop
+  * [MapR: Hadoop Training] (https://www.mapr.com/services/mapr-academy/big-data-hadoop-online-training-all)
+  * [Big Data University] (https://bigdatauniversity.com/)
+  
+  
