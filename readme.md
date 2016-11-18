@@ -63,6 +63,8 @@
 12. [7 Best Tools for Network Administration] (https://blogs.oracle.com/sql/entry/query_tuning_101_comparing_execution?utm_content=buffer88039&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)
 13. [HR Schema SQL and PLSQL questions] (http://www.srikanthtechnologies.com/oracle/dec9/hrqueries.html)
 14. [Oracle Application Express (Build applications using only your web browser)] (https://apex.oracle.com/en/)
+15. [Tom's IT Pro] (http://www.tomsitpro.com/)
+16. [DBA Corner] (http://www.dbta.com/Columns/DBA-Corner/)
 
 ## Books:
 
@@ -104,6 +106,7 @@
 1. [Oracle Database 12c Associate] (https://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=654&get_params=p_id:248&p_org_id=1001&lang=US#tabs-1)
   * [Oracle Database 12c: SQL Fundamentals] (http://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=5001&get_params=p_exam_id:1Z0-061) 
   * [Oracle Database 12c Administration] (http://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=5001&get_params=p_exam_id:1Z0-075)
+  * [Best Database Certifications For 2017] (http://www.tomsitpro.com/articles/database-certifications,2-664.html)	
 2. SAP HANA
   * [Video: Certification Overview] (https://www.youtube.com/watch?v=GZa0GXwE9Mc)
   * [SAP Certified Technology Associate - SAP HANA (Edition 2015)] (https://training.sap.com/shop/certification/c_hanatec151-sap-certified-technology-associate---sap-hana-edition-2015-g/)
@@ -124,5 +127,10 @@
 5. Hadoop
   * [MapR: Hadoop Training] (https://www.mapr.com/services/mapr-academy/big-data-hadoop-online-training-all)
   * [Big Data University] (https://bigdatauniversity.com/)
+6. Red Hat Linux Server
+  * [Red Hat Certified Systems Administrator (RHCSA)] (https://www.redhat.com/en/services/certification/rhcsa) 
+    * [Article List] (http://www.tomsitpro.com/articles/linux-certifications,2-654-5.html)
+
+ 
   
   
