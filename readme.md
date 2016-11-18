@@ -109,10 +109,12 @@
   * [Training] (http://www.itconductor.com/blog/what-i-learned-completing-3-sap-hana-certification-exams-in-10-days)
 3. MCSA: SQL Server 
   * [SQL Server Associate Certificate and training] (https://www.microsoft.com/en-us/learning/mcsa-sql-2016-certification.aspx) 
+  * [Microsoft SQL Server Certificate] (https://www.microsoft.com/en-ie/learning/sql-certification.aspx)
 4. NoSQL database
   * MongoDB
     * [MongoDB Certified Developer Associate Exam] (https://university.mongodb.com/certification/developer/about)
-	* [MongoDB Certified DBA Associate Exam] (https://university.mongodb.com/certification/dba/about)
+	* [MongoDB Certified DBA Associate Exam] (https://university.mongodb.com/certification/dba/about) 
+	* [MongoDB Certificate] (https://university.mongodb.com/courses/catalog) 
   * Neo4j
     * [Neo4j Certification] (https://neo4j.com/graphacademy/neo4j-certification/)
     * [Neo4j: Udemy] (https://www.udemy.com/neo4j_beginners1/)
