@@ -95,6 +95,8 @@
 10. [Oracle Learning Streams] (https://www.youtube.com/user/oraclelearningstream/playlists)
 11. [Oracle Learning Library] (https://www.youtube.com/user/OracleLearning/playlists)
 12. [OTN Database Community] (https://www.youtube.com/user/OTNDatabasechannel/videos)
+13. [MIT: Signal Processing on Databases] (https://www.youtube.com/watch?v=zNGKX-4PRsk&list=PLUl4u3cNGP62DPmPLrVyYfk3-Try_ftJJ)
+14. [Stanford: Database class] (https://www.youtube.com/watch?v=D-k-h0GuFmE&list=PL6hGtHedy2Z4EkgY76QOcueU8lAC4o6c3)
 
 
 ## Certification:
