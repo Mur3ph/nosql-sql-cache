@@ -80,5 +80,5 @@ FROM job_history jh INNER JOIN employees e
 ON jh.employee_id = e.employee_id
 WHERE jh.end_date - jh.start_date > 100
 GROUP BY jh.job_id
-HAVING COUNT(e.job_id) > 1;
+HAVING COUNT(jh.employee_id) > 1;
 
