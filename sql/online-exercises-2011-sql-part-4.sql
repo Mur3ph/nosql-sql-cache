@@ -82,3 +82,13 @@ WHERE jh.end_date - jh.start_date > 100
 GROUP BY jh.job_id
 HAVING COUNT(jh.employee_id) > 1;
 
+-- 4). Display department ID, year, and Number of employees joined ?
+SELECT department_id, EXTRACT(YEAR FROM hire_date) AS THE_YEAR, COUNT(employee_id) AS NUMBER_OF_EMPLOYEES
+FROM employees
+GROUP BY department_id, EXTRACT(YEAR FROM hire_date)
+ORDER BY THE_YEAR;
+
+SELECT department_id, TO_CHAR(hire_date,'YYYY'), COUNT(employee_id) 
+FROM EMPLOYEES 
+GROUP BY department_id, TO_CHAR(hire_date, 'YYYY')
+ORDER BY department_id;
