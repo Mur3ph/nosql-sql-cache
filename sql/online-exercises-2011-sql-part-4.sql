@@ -92,3 +92,26 @@ SELECT department_id, TO_CHAR(hire_date,'YYYY'), COUNT(employee_id)
 FROM EMPLOYEES 
 GROUP BY department_id, TO_CHAR(hire_date, 'YYYY')
 ORDER BY department_id;
+
+-- 5). Display departments where any manager is managing more than 5 employees ?
+SELECT department_id, manager_id, employee_id
+FROM employees;
+
+SELECT department_id, manager_id
+FROM employees
+GROUP BY department_id, manager_id
+HAVING COUNT(employee_id) > 5
+ORDER BY department_id;
+
+SELECT DISTINCT department_id
+FROM employees
+GROUP BY department_id, manager_id 
+HAVING COUNT(employee_id) > 5;
+
+SELECT e.department_id, e.manager_id, COUNT(e.employee_id)
+FROM employees e INNER JOIN departments d
+ON e.department_id = d.department_id
+GROUP BY e.manager_id, e.department_id
+HAVING COUNT(e.employee_id) > 5
+ORDER BY e.department_id;
+
