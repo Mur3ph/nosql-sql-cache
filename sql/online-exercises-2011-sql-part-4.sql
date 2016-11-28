@@ -115,7 +115,7 @@ GROUP BY e.manager_id, e.department_id
 HAVING COUNT(e.employee_id) > 5
 ORDER BY e.department_id;
 
--- 6). Change salary of employee 115 to 8000 if the existing salary is less than 6000 ?
+-- 6). Change salary of employee 115 to 8000, if the existing salary is less than 6000 ?
 UPDATE employees 
 SET salary = 8000
 WHERE employee_id = 115
