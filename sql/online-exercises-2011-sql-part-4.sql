@@ -121,3 +121,15 @@ SET salary = 8000
 WHERE employee_id = 115
 AND salary < 6000;
 
+-- 7). Insert a new employee into employees with all the required details ?
+DESC employees;
+DESC jobs;
+DESC departments;
+
+SELECT employee_id FROM employees
+ORDER BY employee_id DESC;
+
+-- email i unigue and doesn't allow same email twice
+INSERT INTO employees (employee_id, first_name, last_name, email, phone_number, hire_date, job_id, salary, commission_pct, manager_id, department_id)
+VALUES(209, 'Paul', 'Murphy', 'pauly@murphy.ie', '999-999-9999', SYSDATE, 'IT_PROG', 120000, 0.10, 103, 80);
+
