@@ -1,4 +1,4 @@
-# Oracle Personal Training
+# Oracle Personal Training, all databases, networking, os and scripting 
 
 ## Command Line commands:
 
@@ -37,9 +37,6 @@
 
 
 ## Bash Scripts
-
-
-## Python Scripts
 
 
 ## Oracle Ports
