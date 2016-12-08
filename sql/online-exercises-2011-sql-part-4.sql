@@ -129,7 +129,35 @@ DESC departments;
 SELECT employee_id FROM employees
 ORDER BY employee_id DESC;
 
--- email i unigue and doesn't allow same email twice
+-- email is unigue and doesn't allow same email twice
 INSERT INTO employees (employee_id, first_name, last_name, email, phone_number, hire_date, job_id, salary, commission_pct, manager_id, department_id)
 VALUES(209, 'Paul', 'Murphy', 'pauly@murphy.ie', '999-999-9999', SYSDATE, 'IT_PROG', 120000, 0.10, 103, 80);
 
+-- 8). Delete department 20 ?
+SELECT department_id FROM employees;
+SELECT department_id FROM departments;
+
+SELECT * FROM USER_CONSTRAINTS WHERE TABLE_NAME = 'DEPARTMENTS';
+SELECT * FROM USER_CONSTRAINTS WHERE TABLE_NAME = 'EMPLOYEES';
+
+SELECT * FROM user_cons_columns WHERE table_name = 'DEPARTMENTS';
+
+SELECT cols.table_name, cols.column_name, cols.position, cons.status, cons.owner
+FROM all_constraints cons, all_cons_columns cols
+WHERE cols.table_name = 'DEPARTMENTS'
+AND cons.constraint_type = 'P'
+AND cons.constraint_name = cols.constraint_name
+AND cons.owner = cols.owner
+ORDER BY cols.table_name, cols.position;
+
+DELETE FROM employees
+WHERE department_id = 20;
+
+DELETE FROM departments
+WHERE department_id = 20;
+
+ALTER TABLE employees
+ADD CONSTRAINT fk_department_id
+FOREIGN KEY (department_id)
+REFERENCES departments (department_id)
+ON DELETE CASCADE;

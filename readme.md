@@ -127,6 +127,7 @@
 5. Hadoop
   * [MapR: Hadoop Training] (https://www.mapr.com/services/mapr-academy/big-data-hadoop-online-training-all)
   * [Big Data University] (https://bigdatauniversity.com/)
+  * [Free Hadoop Training Online] (http://www.tomsitpro.com/articles/free-hadoop-training-online,1-2074.html)
 6. Red Hat Linux Server
   * [Red Hat Certified Systems Administrator (RHCSA)] (https://www.redhat.com/en/services/certification/rhcsa) 
     * [Article List] (http://www.tomsitpro.com/articles/linux-certifications,2-654-5.html)
