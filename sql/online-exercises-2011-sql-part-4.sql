@@ -156,8 +156,12 @@ WHERE department_id = 20;
 DELETE FROM departments
 WHERE department_id = 20;
 
-ALTER TABLE employees
-ADD CONSTRAINT fk_department_id
-FOREIGN KEY (department_id)
-REFERENCES departments (department_id)
-ON DELETE CASCADE;
+DELETE FROM employees
+WHERE EXISTS
+( SELECT *
+  FROM employees e INNER JOIN departments d
+  ON d.department_id = e.department_id
+  WHERE e.department_id = 20);
+  
+SELECT COUNT(*) FROM departments WHERE department_id = 20;
+SELECT COUNT(*) FROM employees WHERE department_id = 20;
