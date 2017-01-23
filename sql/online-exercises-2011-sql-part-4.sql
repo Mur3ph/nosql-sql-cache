@@ -134,6 +134,9 @@ INSERT INTO employees (employee_id, first_name, last_name, email, phone_number, 
 VALUES(209, 'Paul', 'Murphy', 'pauly@murphy.ie', '999-999-9999', SYSDATE, 'IT_PROG', 120000, 0.10, 103, 80);
 
 -- 8). Delete department 20 ?
+
+-- TODO: Not finished due to primary and foreign key dependancies. Not a straight forward delete due to other tables dependent on the key
+
 SELECT department_id FROM employees;
 SELECT department_id FROM departments;
 
@@ -165,3 +168,6 @@ WHERE EXISTS
   
 SELECT COUNT(*) FROM departments WHERE department_id = 20;
 SELECT COUNT(*) FROM employees WHERE department_id = 20;
+
+-- 9). Change job ID of employee 110 to IT_PROG if the employee belongs to department 10 and the existing job ID does not start with IT ?
+
