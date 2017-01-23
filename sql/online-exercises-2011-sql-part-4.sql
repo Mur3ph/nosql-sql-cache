@@ -177,3 +177,9 @@ SET job_id = 'IT_PROGGG'
 WHERE department_id = 10
 AND employee_id = 110
 AND NOT job_id LIKE 'IT%';
+
+UPDATE employees
+SET job_id = 'IT_PROGGG'
+WHERE department_id = 10
+AND employee_id = 110
+AND job_id != 'IT%';
