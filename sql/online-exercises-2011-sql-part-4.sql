@@ -173,13 +173,32 @@ SELECT COUNT(*) FROM employees WHERE department_id = 20;
 SELECT job_id FROM employees WHERE job_id LIKE 'IT%';
 
 UPDATE employees
-SET job_id = 'IT_PROGGG'
+SET job_id = 'IT_PROG'
 WHERE department_id = 10
 AND employee_id = 110
 AND NOT job_id LIKE 'IT%';
 
 UPDATE employees
-SET job_id = 'IT_PROGGG'
+SET job_id = 'IT_PROG'
+WHERE department_id = 10
+AND employee_id = 110
+AND job_id NOT LIKE 'IT%';
+
+UPDATE employees
+SET job_id = 'IT_PROG'
 WHERE department_id = 10
 AND employee_id = 110
 AND job_id != 'IT%';
+
+UPDATE employees
+SET job_id = 'IT_PROG'
+WHERE department_id = 10
+AND employee_id = 110
+AND job_id <> 'IT%';
+
+UPDATE employees
+SET job_id = 'IT_PROG'
+WHERE department_id = 10
+AND employee_id = 110
+AND job_id ^= 'IT%';
+
