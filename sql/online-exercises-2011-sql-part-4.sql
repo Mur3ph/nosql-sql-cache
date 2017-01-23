@@ -170,4 +170,15 @@ SELECT COUNT(*) FROM departments WHERE department_id = 20;
 SELECT COUNT(*) FROM employees WHERE department_id = 20;
 
 -- 9). Change job ID of employee 110 to IT_PROG if the employee belongs to department 10 and the existing job ID does not start with IT ?
+SELECT job_id FROM employees WHERE job_id LIKE 'IT%';
 
+UPDATE employees
+SET job_id = 'IT_PROGGG'
+WHERE department_id = 10
+AND employee_id = 110
+AND NOT job_id LIKE 'IT%';
+
+UPDATE EMPLOYEES SET JOB_ID= 'IT_PROG' 
+WHERE EMPLOYEE_ID=110 
+AND DEPARTMENT_ID=10 
+AND NOT JOB_ID LIKE 'IT%';
