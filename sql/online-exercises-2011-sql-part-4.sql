@@ -207,6 +207,8 @@ SELECT * FROM departments ORDER BY department_id DESC;
 SELECT * FROM locations WHERE city = 'Tokyo';
 
 INSERT INTO departments (department_id, department_name, manager_id, location_id)
-VALUES(150, 'Tennis', 120, 1200);
+VALUES(1010, 'Tennis', 120, 1200);
 DELETE FROM departments WHERE department_name = 'Tennis';
 
+INSERT INTO departments VALUES (1011, 'Orthopaedics', 120, 1200);
+DELETE FROM departments WHERE department_name = 'Orthopaedics';
