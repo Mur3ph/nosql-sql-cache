@@ -202,3 +202,11 @@ WHERE department_id = 10
 AND employee_id = 110
 AND job_id ^= 'IT%';
 
+-- 10). Insert a row into departments table with manager ID 120 and location ID in any location ID for city Tokyo ?
+SELECT * FROM departments ORDER BY department_id DESC;
+SELECT * FROM locations WHERE city = 'Tokyo';
+
+INSERT INTO departments (department_id, department_name, manager_id, location_id)
+VALUES(150, 'Tennis', 120, 1200);
+DELETE FROM departments WHERE department_name = 'Tennis';
+
