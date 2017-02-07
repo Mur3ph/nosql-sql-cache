@@ -31,3 +31,14 @@ WHERE department_id = 30;
 SELECT employee_id, job_title, end_date-start_date DAYS 
 FROM job_history NATURAL JOIN jobs 
 WHERE department_id=30;
+
+-- 3). Display department name and manager first name ?
+SELECT * FROM departments;
+
+SELECT d.department_name, e.first_name
+FROM departments d, employees e
+WHERE d.manager_id = e.employee_id;
+
+SELECT D.department_name, e.first_name 
+FROM departments d INNER JOIN employees e 
+ON d.manager_id = e.employee_id;
