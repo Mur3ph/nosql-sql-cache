@@ -39,6 +39,19 @@ SELECT d.department_name, e.first_name
 FROM departments d, employees e
 WHERE d.manager_id = e.employee_id;
 
-SELECT D.department_name, e.first_name 
+SELECT d.department_name, e.first_name 
 FROM departments d INNER JOIN employees e 
 ON d.manager_id = e.employee_id;
+
+-- 4). Display department name, manager name, and city ?
+SELECT d.department_name, e.first_name || ' ' || e.last_name AS manager, l.city 
+FROM departments d INNER JOIN employees e 
+ON d.manager_id = e.employee_id
+INNER JOIN locations l
+ON d.location_id = l.location_id;
+
+SELECT d.department_name, e.first_name || ' ' || e.last_name AS manager, l.city 
+FROM departments d INNER JOIN employees e 
+ON (d.manager_id = e.employee_id) 
+INNER JOIN locations l 
+USING (location_id);
