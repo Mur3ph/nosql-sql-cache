@@ -55,3 +55,29 @@ FROM departments d INNER JOIN employees e
 ON (d.manager_id = e.employee_id) 
 INNER JOIN locations l 
 USING (location_id);
+
+-- 5). Display country name, city, and department name ?
+SELECT c.country_name, l.city, d.department_name
+FROM departments d INNER JOIN locations l
+ON d.location_id = l.location_id
+INNER JOIN countries c
+ON l.country_id = c.country_id;
+
+SELECT c.country_name, l.city, d.department_name 
+FROM countries c JOIN locations l
+USING (country_id) 
+JOIN departments d
+USING (location_id);
+
+
+
+
+
+
+
+
+
+
+
+
+
