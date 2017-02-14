@@ -69,7 +69,7 @@ USING (country_id)
 JOIN departments d
 USING (location_id);
 
-
+-- 6). Display job title, department name, employee last name, starting date for all jobs from 2000 to 2005 ?
 
 
 
