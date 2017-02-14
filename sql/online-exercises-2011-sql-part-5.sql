@@ -70,9 +70,27 @@ JOIN departments d
 USING (location_id);
 
 -- 6). Display job title, department name, employee last name, starting date for all jobs from 2000 to 2005 ?
+SELECT j.job_title, d.department_name, e.last_name, e.hire_date
+FROM employees e INNER JOIN jobs j
+ON e.job_id = j.job_id
+INNER JOIN departments d
+ON e.employee_id = d.department_id
+WHERE EXTRACT(YEAR FROM e.hire_date) BETWEEN 2000 AND 2005;
 
+SELECT j.job_title, d.department_name, e.last_name, jh.start_date
+FROM job_history jh INNER JOIN jobs j
+ON jh.job_id = j.job_id
+INNER JOIN departments d
+ON jh.department_id = d.department_id
+INNER JOIN employees e
+ON d.department_id = e.department_id
+WHERE EXTRACT(YEAR FROM jh.start_date) BETWEEN 2000 AND 2005;
 
-
+SELECT job_title, department_name, last_name, start_date 
+FROM job_history JOIN jobs USING (job_id) 
+JOIN departments USING (department_id) 
+JOIN  employees USING (employee_id) 
+WHERE TO_CHAR(start_date,'YYYY') BETWEEN 2000 AND 2005;
 
 
 
