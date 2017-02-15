@@ -92,7 +92,7 @@ JOIN departments USING (department_id)
 JOIN  employees USING (employee_id) 
 WHERE TO_CHAR(start_date,'YYYY') BETWEEN 2000 AND 2005;
 
-
+-- 7). Display job title and average salary of employees ?
 
 
 
