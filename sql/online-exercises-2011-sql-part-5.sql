@@ -93,7 +93,16 @@ JOIN  employees USING (employee_id)
 WHERE TO_CHAR(start_date,'YYYY') BETWEEN 2000 AND 2005;
 
 -- 7). Display job title and average salary of employees ?
+SELECT job_title, AVG(min_salary + max_salary) AS average_emp_salary
+FROM jobs
+GROUP BY job_title
+ORDER BY average_emp_salary DESC; --ASC;
 
+SELECT job_title, AVG(salary) AS average_emp_salary
+FROM employees e INNER JOIN jobs j
+ON e.job_id = j.job_id
+GROUP BY job_title
+ORDER BY average_emp_salary DESC; --ASC;
 
 
 
