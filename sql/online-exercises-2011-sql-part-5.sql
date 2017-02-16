@@ -104,6 +104,9 @@ ON e.job_id = j.job_id
 GROUP BY job_title
 ORDER BY average_emp_salary DESC; --ASC;
 
+-- 8). Display job title, employee name, and the difference between maximum salary for the job and salary of the employee ?
+
+
 
 
 
