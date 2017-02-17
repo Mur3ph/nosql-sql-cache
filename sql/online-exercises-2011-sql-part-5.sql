@@ -105,7 +105,12 @@ GROUP BY job_title
 ORDER BY average_emp_salary DESC; --ASC;
 
 -- 8). Display job title, employee name, and the difference between maximum salary for the job and salary of the employee ?
+SELECT job_title, first_name, max_salary-salary as diff_between_sal_and_maxSal
+FROM employees e INNER JOIN jobs j
+ON e.job_id = j.job_id;
 
+SELECT job_title, first_name, max_salary-salary as difference 
+FROM employees NATURAL JOIN jobs;
 
 
 
