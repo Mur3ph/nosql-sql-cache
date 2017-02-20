@@ -112,7 +112,35 @@ ON e.job_id = j.job_id;
 SELECT job_title, first_name, max_salary-salary as difference 
 FROM employees NATURAL JOIN jobs;
 
+-- 9). Display last name, job title of employees who have commission percentage and belongs to department 30 ? 
+SELECT last_name, job_title, d.department_id, commission_pct
+FROM employees e, departments d, jobs j
+ORDER BY d.department_id;
 
+SELECT last_name, job_title, department_id, commission_pct
+FROM employees e, jobs j
+WHERE commission_pct IS NOT NULL
+AND department_id = 30
+ORDER BY department_id;
 
+SELECT last_name, job_title, d.department_id, commission_pct
+FROM employees e, departments d, jobs j
+WHERE commission_pct IS NOT NULL
+AND d.department_id = 30
+ORDER BY d.department_id;
 
+SELECT last_name, job_title
+FROM employees e INNER JOIN jobs j 
+ON e.job_id = j.job_id
+INNER JOIN departments d
+ON e.department_id = d.department_id 
+WHERE commission_pct IS NOT NULL
+AND d.department_id = 30
+ORDER BY d.department_id;
 
+SELECT last_name, job_title
+FROM employees NATURAL JOIN jobs 
+NATURAL JOIN departments
+WHERE commission_pct IS NOT NULL
+AND department_id = 30
+ORDER BY department_id;
