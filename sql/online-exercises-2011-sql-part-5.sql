@@ -144,3 +144,11 @@ NATURAL JOIN departments
 WHERE commission_pct IS NOT NULL
 AND department_id = 30
 ORDER BY department_id;
+
+-- 10). Display details of jobs that were done by any employee who is currently drawing more than 15000 of salary ?
+SELECT * 
+FROM JOBS j INNER JOIN employees e
+ON j.job_id = e.job_id
+WHERE e.salary > 15000;
+
+
