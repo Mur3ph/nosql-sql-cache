@@ -146,9 +146,20 @@ AND department_id = 30
 ORDER BY department_id;
 
 -- 10). Display details of jobs that were done by any employee who is currently drawing more than 15000 of salary ?
-SELECT * 
+SELECT job_title, min_salary, max_salary 
 FROM JOBS j INNER JOIN employees e
 ON j.job_id = e.job_id
 WHERE e.salary > 15000;
 
+SELECT jh.*
+FROM  job_history jh JOIN employees e 
+ON jh.employee_id = e.employee_id
+WHERE salary > 15000;
 
+SELECT j.job_title, j.min_salary, j.max_salary, jh.employee_id, jh.start_date, jh.end_date, jh.job_id, jh.department_id
+FROM JOBS j INNER JOIN employees e
+ON j.job_id = e.job_id
+INNER JOIN job_history jh
+ON e.employee_id = jh.employee_id 
+WHERE e.salary > 15000
+ORDER BY jh.start_date;
