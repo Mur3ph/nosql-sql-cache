@@ -24,3 +24,29 @@ SELECT e.first_name || ' ' || e.last_name AS fullname
 FROM employees e INNER JOIN employees m
 ON e.employee_id = m.manager_id
 WHERE e.hire_date < m.hire_date;
+
+-- 3). Display employee name, job title for the jobs employee did in the past where the job was done less than six months ? 
+SELECT e.first_name || ' ' || e.last_name AS fullname, j.job_title
+FROM employees e INNER JOIN jobs j
+ON e.job_id = j.job_id;
+
+SELECT e.first_name || ' ' || e.last_name AS fullname, j.job_title
+FROM employees e INNER JOIN jobs j
+ON e.job_id = j.job_id
+INNER JOIN job_history h
+ON j.job_id = h.job_id
+WHERE (h.end_date - h.start_date) / 12 < 6;
+
+SELECT e.first_name || ' ' || e.last_name AS fullname, j.job_title
+FROM employees e INNER JOIN jobs j
+ON e.job_id = j.job_id
+INNER JOIN job_history h
+ON j.job_id = h.job_id
+WHERE MONTHS_BETWEEN(h.end_date, h.start_date) < 6;
+
+SELECT e.first_name || ' ' || e.last_name AS fullname, j.job_title
+FROM employees e INNER JOIN job_history h 
+ON e.employee_id = h.employee_id
+INNER JOIN jobs j  
+ON h.job_id = j.job_id
+WHERE MONTHS_BETWEEN(h.end_date, h.start_date) < 6;
