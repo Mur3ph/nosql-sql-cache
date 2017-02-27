@@ -50,3 +50,30 @@ ON e.employee_id = h.employee_id
 INNER JOIN jobs j  
 ON h.job_id = j.job_id
 WHERE MONTHS_BETWEEN(h.end_date, h.start_date) < 6;
+
+-- 4). Display employee name and country in which he is working ?
+SELECT e.first_name || ' ' || e.last_name, c.country_name
+FROM employees e INNER JOIN departments d
+ON e.department_id = d.department_id
+INNER JOIN locations l
+ON d.location_id = l.location_id
+INNER JOIN countries c
+ON l.country_id = c.country_id;
+
+SELECT e.first_name || ' ' || e.last_name, c.country_name 
+FROM employees e JOIN departments d
+USING(department_id) 
+JOIN locations l
+USING( location_id) 
+JOIN countries c
+USING (country_id);
+
+
+
+
+
+
+
+
+
+
