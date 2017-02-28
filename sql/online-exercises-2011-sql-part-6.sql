@@ -68,7 +68,17 @@ USING( location_id)
 JOIN countries c
 USING (country_id);
 
+-- 5). Display department name, average salary and number of employees with commission within the department ?
+SELECT d.department_name, AVG(e.salary) AS average_salary, COUNT(e.commission_pct) AS has_commission
+FROM departments d INNER JOIN employees e
+ON d.department_id = e.department_id
+--WHERE e.commission_pct IS NOT NULL    -- No need to check for null, as when you use the field in Count, it excludes nulls
+GROUP BY d.department_name;
 
+SELECT d.department_name, AVG(e.salary) AS average_salary, COUNT(e.commission_pct) AS has_commission 
+FROM departments d JOIN employees e 
+USING (department_id) 
+GROUP BY d.department_name;
 
 
 
