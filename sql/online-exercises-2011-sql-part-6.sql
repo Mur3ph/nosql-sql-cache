@@ -80,7 +80,22 @@ FROM departments d JOIN employees e
 USING (department_id) 
 GROUP BY d.department_name;
 
+-- 6). Display the month in which more than 5 employees joined in any department located in Sydney ?
+SELECT EXTRACT(MONTH FROM e.hire_date) AS month
+FROM employees e INNER JOIN departments d
+ON e.department_id = d.department_id
+INNER JOIN locations l
+ON d.location_id = l.location_id
+WHERE l.city LIKE 'Sydney'
+GROUP BY e.hire_date
+HAVING COUNT(e.employee_id) > 5;
 
+SELECT TO_CHAR(e.hire_date,'MON-YY') AS month
+FROM employees e JOIN departments d USING (department_id) 
+JOIN  locations l USING (location_id) 
+WHERE  CITY = 'Seattle'
+GROUP BY e.hire_date
+HAVING COUNT(*) > 5;
 
 
 
