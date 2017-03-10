@@ -118,6 +118,16 @@ SELECT * FROM departments d WHERE d.department_id IN
   HAVING MAX(e.salary) > 10000)
 ORDER BY d.department_id;
 
+-- 8). Display details of departments managed by ‘Smith' ?
+SELECT d.department_name, d.manager_id, d.location_id, e.last_name, e.manager_id, e.employee_id
+FROM departments d INNER JOIN employees e
+ON d.department_id = e.department_id
+WHERE e.last_name LIKE 'Smith'
+GROUP BY d.department_name, d.manager_id, d.location_id, e.last_name, e.manager_id, e.employee_id;
 
+SELECT * FROM departments d WHERE d.manager_id IN 
+  ( SELECT e.employee_id 
+    FROM employees e 
+    WHERE e.first_name = 'Smith');
 
 
