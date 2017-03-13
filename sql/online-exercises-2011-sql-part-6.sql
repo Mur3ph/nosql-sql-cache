@@ -137,4 +137,19 @@ SELECT * FROM departments d WHERE d.manager_id IN
     WHERE e.first_name = 'Smith');
 
 -- 9). Display jobs into which employees joined in the current year ?
+SELECT j.job_id, jh.start_date
+FROM jobs j INNER JOIN job_history jh
+ON j.job_id = jh.job_id
+WHERE EXTRACT(YEAR FROM jh.start_date) = EXTRACT(YEAR FROM SYSDATE);
 
+SELECT j.job_id, e.hire_date
+FROM jobs j INNER JOIN employees e
+ON j.job_id = e.job_id
+WHERE EXTRACT(YEAR FROM e.hire_date) = EXTRACT(YEAR FROM SYSDATE);
+
+SELECT * 
+FROM jobs j 
+WHERE j.job_id IN 
+       (SELECT e.job_id 
+        FROM employees e 
+        WHERE TO_CHAR(e.hire_date,'YYYY') = TO_CHAR(SYSDATE,'YYYY'));
