@@ -153,3 +153,23 @@ WHERE j.job_id IN
        (SELECT e.job_id 
         FROM employees e 
         WHERE TO_CHAR(e.hire_date,'YYYY') = TO_CHAR(SYSDATE,'YYYY'));
+        
+-- 10). Display employees who did not do any job in the past ?
+SELECT e.employee_id, COUNT(e.job_id)
+FROM employees e
+GROUP BY e.employee_id;
+
+SELECT e.employee_id, COUNT(e.job_id), COUNT(jh.job_id)
+FROM employees e INNER JOIN job_history jh
+ON e.employee_id = jh.employee_id
+GROUP BY e.employee_id;
+
+SELECT e.employee_id, e.first_name, e.last_name, e.email, COUNT(e.job_id)
+FROM employees e
+WHERE e.employee_id NOT IN
+    (   
+        SELECT jh.employee_id
+        FROM job_history jh
+    )
+GROUP BY e.employee_id, e.first_name, e.last_name, e.email;
+
