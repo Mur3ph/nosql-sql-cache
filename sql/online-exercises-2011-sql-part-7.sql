@@ -17,3 +17,4 @@ WHERE e.employee_id IN
         FROM job_history jh
     )
 GROUP BY j.job_title;
+
