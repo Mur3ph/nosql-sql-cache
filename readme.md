@@ -46,22 +46,22 @@
 
 ## Sites:
 
-1. [Live SQL Content] (https://livesql.oracle.com/apex/livesql/file/toc.html)
-2. [Bash scripting tutorial] (https://bluepenguinlist.com/2016/11/04/bash-scripting-tutorial/?fromTwitterID=nixCraft)
-3. [Network commands] (https://blog.pandorafms.org/network-commands/)
-4. [Bash for DBAs] (https://amitzil.wordpress.com/2016/09/07/bash-for-dbas-part-1/)
-5. [Some Basic Linux Commands I Have Used During My Linux Journey – Part 1] (http://www.unixmen.com/basic-linux-commands-used-linux-journey/)
-6. [Genealogy of Relational Database Management Systems] (https://hpi.de/fileadmin/user_upload/fachgebiete/naumann/projekte/RDBMSGenealogy/RDBMS_Genealogy_V4_print.pdf)
-7. [Say NO to Venn Diagrams When Explaining JOINs] (https://blog.jooq.org/2016/07/05/say-no-to-venn-diagrams-when-explaining-joins/)
-8. [How To Use ps, kill, and nice to Manage Processes in Linux] (https://www.digitalocean.com/community/tutorials/how-to-use-ps-kill-and-nice-to-manage-processes-in-linux?utm_content=bufferd2197&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)
-9. [Linux file system hierarchy] (https://www.blackmoreops.com/2015/06/18/linux-file-system-hierarchy-v2-0/)
-10. [Microsoft Database training for beginners] (https://mva.microsoft.com/en-US/training-courses/database-fundamentals-8243?l=TEBiexJy_5904984382)
-11. [Query Tuning 101] (https://blogs.oracle.com/sql/entry/query_tuning_101_comparing_execution?utm_content=buffer88039&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)
-12. [7 Best Tools for Network Administration] (https://blogs.oracle.com/sql/entry/query_tuning_101_comparing_execution?utm_content=buffer88039&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)
-13. [HR Schema SQL and PLSQL questions] (http://www.srikanthtechnologies.com/oracle/dec9/hrqueries.html)
-14. [Oracle Application Express (Build applications using only your web browser)] (https://apex.oracle.com/en/)
-15. [Tom's IT Pro] (http://www.tomsitpro.com/)
-16. [DBA Corner] (http://www.dbta.com/Columns/DBA-Corner/)
+1. [Live SQL Content](https://livesql.oracle.com/apex/livesql/file/toc.html)
+2. [Bash scripting tutorial](https://bluepenguinlist.com/2016/11/04/bash-scripting-tutorial/?fromTwitterID=nixCraft)
+3. [Network commands](https://blog.pandorafms.org/network-commands/)
+4. [Bash for DBAs](https://amitzil.wordpress.com/2016/09/07/bash-for-dbas-part-1/)
+5. [Some Basic Linux Commands I Have Used During My Linux Journey – Part 1](http://www.unixmen.com/basic-linux-commands-used-linux-journey/)
+6. [Genealogy of Relational Database Management Systems](https://hpi.de/fileadmin/user_upload/fachgebiete/naumann/projekte/RDBMSGenealogy/RDBMS_Genealogy_V4_print.pdf)
+7. [Say NO to Venn Diagrams When Explaining JOINs](https://blog.jooq.org/2016/07/05/say-no-to-venn-diagrams-when-explaining-joins/)
+8. [How To Use ps, kill, and nice to Manage Processes in Linux](https://www.digitalocean.com/community/tutorials/how-to-use-ps-kill-and-nice-to-manage-processes-in-linux?utm_content=bufferd2197&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)
+9. [Linux file system hierarchy](https://www.blackmoreops.com/2015/06/18/linux-file-system-hierarchy-v2-0/)
+10. [Microsoft Database training for beginners](https://mva.microsoft.com/en-US/training-courses/database-fundamentals-8243?l=TEBiexJy_5904984382)
+11. [Query Tuning 101](https://blogs.oracle.com/sql/entry/query_tuning_101_comparing_execution?utm_content=buffer88039&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)
+12. [7 Best Tools for Network Administration](https://blogs.oracle.com/sql/entry/query_tuning_101_comparing_execution?utm_content=buffer88039&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)
+13. [HR Schema SQL and PLSQL questions](http://www.srikanthtechnologies.com/oracle/dec9/hrqueries.html)
+14. [Oracle Application Express: Build applications using only your web browser](https://apex.oracle.com/en/)
+15. [Tom's IT Pro](http://www.tomsitpro.com/)
+16. [DBA Corner](http://www.dbta.com/Columns/DBA-Corner/)
 
 ## Books:
 
