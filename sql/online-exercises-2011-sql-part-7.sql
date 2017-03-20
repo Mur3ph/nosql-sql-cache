@@ -18,3 +18,32 @@ WHERE e.employee_id IN
     )
 GROUP BY j.job_title;
 
+-- 2). Display country name, city, and number of departments where department has more than 5 employees ?
+SELECT c.country_name, l.city
+FROM countries c INNER JOIN locations l
+ON c.country_id = l.country_id;
+
+SELECT c.country_name, l.city, COUNT(d.department_id)
+FROM countries c INNER JOIN locations l
+ON c.country_id = l.country_id
+INNER JOIN departments d
+ON l.location_id = d.location_id
+INNER JOIN employees e
+ON d.department_id = e.department_id
+GROUP BY c.country_name, l.city
+HAVING COUNT(e.employee_id) > 5;
+
+SELECT c.country_name, l.city, COUNT(d.department_id)
+FROM countries c INNER JOIN locations l
+USING (country_id) 
+INNER JOIN departments d
+USING (location_id) 
+WHERE department_id IN 
+    (
+        SELECT e.department_id 
+        FROM employees e
+        GROUP BY e.department_id 
+        HAVING COUNT(e.employee_id) > 5
+        --HAVING COUNT(e.department_id) > 5
+     )
+GROUP BY c.country_name, l.city;
