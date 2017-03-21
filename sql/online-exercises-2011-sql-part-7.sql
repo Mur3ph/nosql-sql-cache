@@ -47,3 +47,43 @@ WHERE department_id IN
         --HAVING COUNT(e.department_id) > 5
      )
 GROUP BY c.country_name, l.city;
+
+-- 3). Display details of manager who manages more than 5 employees ?
+SELECT e1.first_name || ' ' || e1.last_name
+FROM employees e1 INNER JOIN employees e2
+ON e1.employee_id = e2.manager_id
+GROUP BY e1.first_name, e1.last_name
+HAVING COUNT(e1.employee_id) > 5;
+
+SELECT first_name || ' ' || last_name 
+FROM employees 
+WHERE employee_id IN 
+    (
+        SELECT manager_id 
+        FROM employees 
+        GROUP BY manager_id 
+        HAVING COUNT(*) > 5
+    );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
