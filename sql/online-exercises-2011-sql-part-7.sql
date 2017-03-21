@@ -65,8 +65,8 @@ WHERE employee_id IN
         HAVING COUNT(*) > 5
     );
 
-
-
+SELECT Q'[Paddy O'Reilly]' FROM DUAL;
+SELECT Q'$Paddy O'Reilly$' FROM DUAL;
 
 
 
