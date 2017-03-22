@@ -1,3 +1,7 @@
+-- Useful commands
+SELECT Q'[Paddy O'Reilly]' FROM DUAL;
+SELECT Q'$Paddy O'Reilly$' FROM DUAL;
+
 -- 1). Display job title and average salary for employees who did a job in the past ?
 SELECT j.job_title, ROUND(AVG(e.salary), 2) AS average_salary
 FROM employees e, jobs j
@@ -65,8 +69,24 @@ WHERE employee_id IN
         HAVING COUNT(*) > 5
     );
 
-SELECT Q'[Paddy O'Reilly]' FROM DUAL;
-SELECT Q'$Paddy O'Reilly$' FROM DUAL;
+-- 4). Display employee name, job title, start date, and end date of past jobs of all employees with commission percentage null ?
+SELECT e.first_name || ' ' || e.last_name AS Fullname, j.job_title, jh.start_date, jh.end_date
+FROM employees e INNER JOIN jobs j
+ON e.job_id = j.job_id
+INNER JOIN job_history jh
+ON e.employee_id = jh.employee_id
+WHERE e.commission_pct IS NULL
+ORDER BY Fullname;
+
+SELECT e.first_name || ' ' || e.last_name AS Fullname, j.job_title, jh.start_date, jh.end_date
+FROM job_history jh INNER JOIN jobs j 
+USING (job_id) 
+INNER JOIN employees e  
+ON ( jh.employee_id = e.employee_id)
+WHERE e.commission_pct IS NULL
+ORDER BY Fullname;
+
+
 
 
 
