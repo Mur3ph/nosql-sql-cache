@@ -75,7 +75,7 @@ FROM employees e INNER JOIN jobs j
 ON e.job_id = j.job_id
 INNER JOIN job_history jh
 ON e.employee_id = jh.employee_id
-WHERE e.commission_pct IS NULL
+WHERE e.commission_pct IS NULL,
 ORDER BY Fullname;
 
 SELECT e.first_name || ' ' || e.last_name AS Fullname, j.job_title, jh.start_date, jh.end_date
@@ -86,9 +86,29 @@ ON ( jh.employee_id = e.employee_id)
 WHERE e.commission_pct IS NULL
 ORDER BY Fullname;
 
+-- 5). Display the departments into which no employee joined in last two years ?
+SELECT d.department_id, d.department_name, d.manager_id, d.location_id
+FROM departments d INNER JOIN employees e
+ON d.department_id = e.department_id
+WHERE (EXTRACT(YEAR FROM SYSDATE) - EXTRACT(YEAR FROM e.hire_date)) < 2;
 
+SELECT d.department_id, d.department_name, d.manager_id, d.location_id
+FROM departments d
+WHERE d.department_id NOT IN 
+    ( 
+        SELECT e.department_id 
+        FROM employees e 
+        WHERE (EXTRACT(YEAR FROM SYSDATE) - EXTRACT(YEAR FROM e.hire_date)) < 2
+    );
 
-
+SELECT  * 
+FROM departments d
+WHERE d.department_id NOT IN 
+    ( 
+        SELECT e.department_id 
+        FROM employees e 
+        WHERE FLOOR((SYSDATE-e.hire_date)/365) < 2
+    );
 
 
 
