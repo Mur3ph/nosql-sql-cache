@@ -110,7 +110,29 @@ WHERE d.department_id NOT IN
         WHERE FLOOR((SYSDATE-e.hire_date)/365) < 2
     );
 
+-- 6). Display the details of departments in which the max salary is greater than 10000 for employees who did a job in the past ?
+SELECT d.department_id
+FROM departments d INNER JOIN job_history jh
+ON d.department_id = jh.department_id
+INNER JOIN jobs j
+ON jh.job_id = j.job_id
+WHERE j.max_salary > 10000
+AND (EXTRACT(YEAR FROM SYSDATE) - EXTRACT(YEAR FROM jh.start_date)) <= 1;
 
+SELECT d.*                                  --, jh.start_date, e.salary
+FROM departments d                          --, job_history jh, employees e
+WHERE d.department_id IN 
+    (
+        SELECT e.department_id
+        FROM employees e 
+        WHERE e.employee_id IN 
+            (
+                SELECT jh.employee_id 
+                FROM job_history jh
+            )
+        GROUP BY e.department_id
+        HAVING MAX(e.salary) > 10000
+    )
 
 
 
