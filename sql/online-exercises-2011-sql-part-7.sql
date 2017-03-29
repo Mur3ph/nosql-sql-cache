@@ -119,8 +119,25 @@ ON jh.job_id = j.job_id
 WHERE j.max_salary > 10000
 AND (EXTRACT(YEAR FROM SYSDATE) - EXTRACT(YEAR FROM jh.start_date)) <= 1;
 
-SELECT d.*                                  --, jh.start_date, e.salary
-FROM departments d                          --, job_history jh, employees e
+SELECT d.*                              
+FROM departments d                          
+WHERE d.department_id IN 
+    (
+        SELECT e.department_id
+        FROM employees e 
+        WHERE e.employee_id IN 
+            (
+                SELECT jh.employee_id 
+                FROM job_history jh
+                WHERE (EXTRACT(YEAR FROM SYSDATE) - EXTRACT(YEAR FROM jh.start_date)) <= 1
+            )
+        GROUP BY e.department_id
+        HAVING MAX(e.salary) > 10000
+    );
+    
+    
+SELECT d.*                              
+FROM departments d                          
 WHERE d.department_id IN 
     (
         SELECT e.department_id
@@ -132,11 +149,41 @@ WHERE d.department_id IN
             )
         GROUP BY e.department_id
         HAVING MAX(e.salary) > 10000
-    )
+    );
 
+-- 7). Display details of current job for employees who worked as IT Programmers in the past ?
+SELECT jh.employee_id, j.job_title
+FROM jobs j INNER JOIN job_history jh
+ON j.job_id = jh.job_id
+WHERE j.job_title LIKE 'Programmer';
 
+SELECT e.first_name || ' ' || e.last_name AS FullName, jh.employee_id, j.job_title
+FROM jobs j INNER JOIN job_history jh
+ON j.job_id = jh.job_id
+INNER JOIN employees e
+ON j.job_id = e.job_id
+WHERE j.job_title LIKE 'Programmer';
 
+SELECT e.first_name || ' ' || e.last_name AS FullName, jh.employee_id, j.job_title
+FROM jobs j INNER JOIN employees e 
+ON j.job_id = e.job_id
+INNER JOIN job_history jh
+ON e.employee_id = jh.employee_id
+WHERE jh.job_id LIKE 'IT_PROG';
 
+SELECT * 
+FROM jobs j 
+WHERE j.job_id IN 
+ (
+    SELECT e.job_id 
+    FROM employees e 
+    WHERE e.employee_id IN 
+        (
+            SELECT jh.employee_id 
+            FROM job_history jh 
+            WHERE jh.job_id = 'IT_PROG'
+        )
+ );
 
 
 
