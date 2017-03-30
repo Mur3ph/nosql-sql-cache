@@ -185,10 +185,21 @@ WHERE j.job_id IN
         )
  );
 
+-- 8). Display the details of employees drawing the highest salary in the department ?
+SELECT e.first_name || ' ' || e.last_name AS FullName, MAX(e.salary) AS Salary
+FROM employees e
+GROUP BY e.first_name || ' ' || e.last_name;
 
-
-
-
+SELECT outer.first_name || ' ' || outer.last_name AS FullName, MAX(outer.salary) AS Salary, outer.department_id
+FROM employees outer
+WHERE outer.salary =
+    (
+        SELECT MAX(inner.salary)
+        FROM employees inner
+        WHERE inner.department_id = outer.department_id
+    )
+GROUP BY outer.first_name || ' ' || outer.last_name, outer.department_id
+ORDER BY outer.department_id;
 
 
 
