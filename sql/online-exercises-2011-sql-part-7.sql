@@ -201,7 +201,16 @@ WHERE outer.salary =
 GROUP BY outer.first_name || ' ' || outer.last_name, outer.department_id
 ORDER BY outer.department_id;
 
-
+-- 9). Display the details of employees drawing the highest salary in the department ?
+SELECT outer.first_name || ' ' || outer.last_name, outer.salary, outer.job_id, outer.department_id
+FROM employees outer
+WHERE outer.salary =
+    (
+        SELECT MAX(inner.salary)
+        FROM employees inner
+        WHERE inner.department_id = outer.department_id
+    )
+ORDER BY outer.department_id;
 
 
 
