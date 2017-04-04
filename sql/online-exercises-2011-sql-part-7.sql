@@ -212,7 +212,33 @@ WHERE outer.salary =
     )
 ORDER BY outer.department_id;
 
+-- 10). Display the city of employee whose employee ID is 105 ?
+SELECT l.city
+FROM locations l INNER JOIN departments d
+ON l.location_id = d.location_id
+WHERE d.department_id IN
+    (
+      SELECT e.department_id
+      FROM employees e
+      WHERE e.employee_id = 105
+    );
+    
+SELECT l.city 
+FROM locations l 
+WHERE l.location_id = 
+    (
+        SELECT d.location_id 
+        FROM departments d 
+        WHERE d.department_id =
+             	(
+                    SELECT e.department_id 
+                    FROM employees e 
+                    WHERE e.employee_id = 105
+                )
+	);
 
+
+-- 11). Display third highest salary of all employees ?
 
 
 
