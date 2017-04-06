@@ -239,6 +239,29 @@ WHERE l.location_id =
 
 
 -- 11). Display third highest salary of all employees ?
+SELECT DISTINCT(e.salary) AS Salary
+FROM employees e
+ORDER BY Salary DESC ;
+
+SELECT  MIN(salary)
+FROM 
+    (
+        SELECT DISTINCT(e.salary) AS Salary
+        FROM employees e
+        WHERE ROWNUM <= 4
+        ORDER BY Salary DESC
+    );
+    
+SELECT outer.salary 
+FROM employees outer
+WHERE 
+    (
+        SELECT COUNT( DISTINCT inner.salary ) 
+        FROM employees inner
+        WHERE  inner.salary > outer.salary
+    )
+ = 2; -- Positions like array: 0, 1, 2, 3, 4..etc.
+ 
 
 
 
