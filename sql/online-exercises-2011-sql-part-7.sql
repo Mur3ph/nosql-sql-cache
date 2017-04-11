@@ -256,7 +256,7 @@ SELECT outer.salary
 FROM employees outer
 WHERE 
     (
-        SELECT COUNT( DISTINCT inner.salary ) 
+        SELECT COUNT( DISTINCT(inner.salary) ) 
         FROM employees inner
         WHERE  inner.salary > outer.salary
     )
