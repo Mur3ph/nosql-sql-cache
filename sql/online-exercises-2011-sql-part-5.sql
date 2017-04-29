@@ -163,3 +163,5 @@ INNER JOIN job_history jh
 ON e.employee_id = jh.employee_id 
 WHERE e.salary > 15000
 ORDER BY jh.start_date;
+
+-- Revisit query I couldn't solve earlier. I think I have a solution Update instead of Delete
