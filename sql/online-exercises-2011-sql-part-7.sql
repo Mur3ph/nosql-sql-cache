@@ -75,7 +75,7 @@ FROM employees e INNER JOIN jobs j
 ON e.job_id = j.job_id
 INNER JOIN job_history jh
 ON e.employee_id = jh.employee_id
-WHERE e.commission_pct IS NULL,
+WHERE e.commission_pct IS NULL
 ORDER BY Fullname;
 
 SELECT e.first_name || ' ' || e.last_name AS Fullname, j.job_title, jh.start_date, jh.end_date
