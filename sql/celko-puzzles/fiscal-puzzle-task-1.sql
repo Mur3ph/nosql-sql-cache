@@ -25,5 +25,5 @@ CREATE TABLE Absenteeism
   CONSTRAINT pk_absenteeism           PRIMARY KEY (employee_id, absent_date),
   CONSTRAINT fk_personel              FOREIGN KEY (employee_id) REFERENCES Personel,
   CONSTRAINT fk_excuse_list           FOREIGN KEY (reason_code) REFERENCES ExcuseList,
-  CONSTRAINT ck_severity_points    CHECK (severity_points BETWEEN 1 AND 4)
+  CONSTRAINT ck_severity_points       CHECK (severity_points BETWEEN 1 AND 4)
 );
