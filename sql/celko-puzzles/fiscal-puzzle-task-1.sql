@@ -1,3 +1,5 @@
+DROP TABLE FiscalYearTable1;
+
 CREATE TABLE FiscalYearTable1
 (
   fiscal_year_id  INTEGER NOT NULL,
@@ -5,13 +7,13 @@ CREATE TABLE FiscalYearTable1
   start_date      DATE    NOT NULL,
   end_date        DATE    NOT NULL,
   CONSTRAINT pk_fiscal_year                   PRIMARY KEY (fiscal_year_id),
-  CONSTRAINT check_dates                      CHECK (start_date < end_date),
-  CONSTRAINT check_is_start_date_year_valid   CHECK ( (EXTRACT(YEAR FROM start_date)) = fiscal_year - 1),
-  CONSTRAINT check_is_start_date_month_valid  CHECK ( (EXTRACT(MONTH FROM start_date)) = 10),
-  CONSTRAINT check_is_start_date_day_valid    CHECK ( (EXTRACT(DAY FROM start_date)) = 01),
-  CONSTRAINT check_is_end_date_year_valid     CHECK ( (EXTRACT(YEAR FROM end_date)) = fiscal_year),
-  CONSTRAINT check_is_end_date_month_valid    CHECK ( (EXTRACT(MONTH FROM end_date)) = 09),
-  CONSTRAINT check_is_end_date_day_valid      CHECK ( (EXTRACT(DAY FROM end_date)) = 30)
+  CONSTRAINT ck_dates                      CHECK (start_date < end_date),
+  CONSTRAINT ck_is_start_date_year_valid   CHECK ( (EXTRACT(YEAR FROM start_date)) = fiscal_year - 1),
+  CONSTRAINT ck_is_start_date_month_valid  CHECK ( (EXTRACT(MONTH FROM start_date)) = 10),
+  CONSTRAINT ck_is_start_date_day_valid    CHECK ( (EXTRACT(DAY FROM start_date)) = 01),
+  CONSTRAINT ck_is_end_date_year_valid     CHECK ( (EXTRACT(YEAR FROM end_date)) = fiscal_year),
+  CONSTRAINT ck_is_end_date_month_valid    CHECK ( (EXTRACT(MONTH FROM end_date)) = 09),
+  CONSTRAINT ck_is_end_date_day_valid      CHECK ( (EXTRACT(DAY FROM end_date)) = 30)
 );
 
 CREATE TABLE Absenteeism
@@ -23,5 +25,5 @@ CREATE TABLE Absenteeism
   CONSTRAINT pk_absenteeism           PRIMARY KEY (employee_id, absent_date),
   CONSTRAINT fk_personel              FOREIGN KEY (employee_id) REFERENCES Personel,
   CONSTRAINT fk_excuse_list           FOREIGN KEY (reason_code) REFERENCES ExcuseList,
-  CONSTRAINT check_severity_points    CHECK (severity_points BETWEEN 1 AND 4)
+  CONSTRAINT ck_severity_points    CHECK (severity_points BETWEEN 1 AND 4)
 );
