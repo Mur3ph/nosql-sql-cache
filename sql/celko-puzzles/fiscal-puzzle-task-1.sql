@@ -13,3 +13,15 @@ CREATE TABLE FiscalYearTable1
   CONSTRAINT check_is_end_date_month_valid    CHECK ( (EXTRACT(MONTH FROM end_date)) = 09),
   CONSTRAINT check_is_end_date_day_valid      CHECK ( (EXTRACT(DAY FROM end_date)) = 30)
 );
+
+CREATE TABLE Absenteeism
+(
+  employee_id     INTEGER NOT NULL,
+  absent_date     DATE    NOT NULL,
+  reason_code     CHAR    NOT NULL,
+  severity_points INTEGER NOT NULL,
+  CONSTRAINT pk_absenteeism           PRIMARY KEY (employee_id, absent_date),
+  CONSTRAINT fk_personel              FOREIGN KEY (employee_id) REFERENCES Personel,
+  CONSTRAINT fk_excuse_list           FOREIGN KEY (reason_code) REFERENCES ExcuseList,
+  CONSTRAINT check_severity_points    CHECK (severity_points BETWEEN 1 AND 4)
+);
