@@ -1,5 +1,7 @@
 DROP TABLE FiscalYearTable1;
 DROP TABLE Absenteeism;
+DROP TABLE Personel;
+-- DROP TABLE ExcuseList;
 
 CREATE TABLE FiscalYearTable1
 (
@@ -7,7 +9,7 @@ CREATE TABLE FiscalYearTable1
   fiscal_year     INTEGER NOT NULL,
   start_date      DATE    NOT NULL,
   end_date        DATE    NOT NULL,
-  CONSTRAINT pk_fiscal_year                   PRIMARY KEY (fiscal_year_id),
+  CONSTRAINT pk_fiscal_year                PRIMARY KEY (fiscal_year_id),
   CONSTRAINT ck_dates                      CHECK (start_date < end_date),
   CONSTRAINT ck_is_start_date_year_valid   CHECK ( (EXTRACT(YEAR FROM start_date)) = fiscal_year - 1),
   CONSTRAINT ck_is_start_date_month_valid  CHECK ( (EXTRACT(MONTH FROM start_date)) = 10),
@@ -20,13 +22,17 @@ CREATE TABLE FiscalYearTable1
 CREATE TABLE Personel
 (
   employee_id  INTEGER     NOT NULL,
-  first_name   VARCHAR     NOT NULL
-};
+  first_name   VARCHAR(50) NOT NULL,
+  last_name    VARCHAR(5)  NOT NULL,
+  CONSTRAINT pk_personel   PRIMARY KEY (employee_id)
+);
 
 CREATE TABLE ExcuseList
 (
-
-};
+  reason_code  INTEGER         NOT NULL,
+  excuse       VARCHAR(100)    NOT NULL,
+  CONSTRAINT pk_excuse_list    PRIMARY KEY (reason_code)
+);
 
 CREATE TABLE Absenteeism
 (
