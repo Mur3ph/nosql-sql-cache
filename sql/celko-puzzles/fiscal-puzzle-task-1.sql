@@ -30,8 +30,10 @@ CREATE TABLE Personel
 CREATE TABLE ExcuseList
 (
   reason_code  INTEGER         NOT NULL,
+  employee_id  INTEGER         NOT NULL,
   excuse       VARCHAR(100)    NOT NULL,
-  CONSTRAINT pk_excuse_list    PRIMARY KEY (reason_code)
+  CONSTRAINT pk_excuse_list    PRIMARY KEY (reason_code),
+  CONSTRAINT fk_personel       FOREIGN KEY (employee_id) REFERENCES Personel
 );
 
 CREATE TABLE Absenteeism
