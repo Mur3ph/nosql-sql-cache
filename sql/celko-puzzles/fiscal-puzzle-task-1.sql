@@ -1,4 +1,5 @@
 DROP TABLE FiscalYearTable1;
+DROP TABLE Absenteeism;
 
 CREATE TABLE FiscalYearTable1
 (
@@ -15,6 +16,17 @@ CREATE TABLE FiscalYearTable1
   CONSTRAINT ck_is_end_date_month_valid    CHECK ( (EXTRACT(MONTH FROM end_date)) = 09),
   CONSTRAINT ck_is_end_date_day_valid      CHECK ( (EXTRACT(DAY FROM end_date)) = 30)
 );
+
+CREATE TABLE Personel
+(
+  employee_id  INTEGER     NOT NULL,
+  first_name   VARCHAR     NOT NULL
+};
+
+CREATE TABLE ExcuseList
+(
+
+};
 
 CREATE TABLE Absenteeism
 (
