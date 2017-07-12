@@ -42,7 +42,6 @@ CREATE TABLE ExcuseList
 
 CREATE TABLE Absenteeism
 (
---  absenteeism_id  INTEGER NOT NULL,
   employee_id                         INTEGER NOT NULL,
   absent_date                         DATE    NOT NULL,
   reason_code                         CHAR(40)NOT NULL,
