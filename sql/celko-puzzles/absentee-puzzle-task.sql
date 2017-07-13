@@ -6,6 +6,8 @@ TRUNCATE TABLE Absenteeism;
 TRUNCATE TABLE ExcuseList;
 TRUNCATE TABLE Personel;
 
+DELETE mytablename;
+
 -- Task 2: Missing days at work
 
 CREATE TABLE Personel
