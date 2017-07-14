@@ -62,3 +62,15 @@ INSERT INTO Absenteeism (employee_id, absent_date, reason_code, severity_points)
   VALUES (2, TO_DATE('2015/05/03 21:02:44', 'yyyy/mm/dd hh24:mi:ss'), 'Bad hair day!', 2);
 INSERT INTO Absenteeism (employee_id, absent_date, reason_code, severity_points)
   VALUES (3, TO_DATE('2017/05/03 21:02:44', 'yyyy/mm/dd hh24:mi:ss'), 'Dog ate my homework!', 3);
+  
+-- Select statements for Absenteeism table
+SELECT *
+FROM Absenteeism;
+
+-- Select statements for ExcuseList table
+SELECT *
+FROM ExcuseList;
+
+-- Select statements for Personel table
+SELECT *
+FROM Personel;
