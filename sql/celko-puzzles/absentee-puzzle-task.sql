@@ -62,6 +62,10 @@ INSERT INTO Absenteeism (employee_id, absent_date, reason_code, severity_points)
   VALUES (2, TO_DATE('2015/05/03 21:02:44', 'yyyy/mm/dd hh24:mi:ss'), 'Bad hair day!', 2);
 INSERT INTO Absenteeism (employee_id, absent_date, reason_code, severity_points)
   VALUES (3, TO_DATE('2017/05/03 21:02:44', 'yyyy/mm/dd hh24:mi:ss'), 'Dog ate my homework!', 3);
+INSERT INTO Absenteeism (employee_id, absent_date, reason_code, severity_points)
+  VALUES (1, TO_DATE('03-05-2016 02:03:14', 'dd-mm-yyyy hh24:mi:ss'), 'Hit by beer truck.!', 1);
+INSERT INTO Absenteeism (employee_id, absent_date, reason_code, severity_points)
+  VALUES (1, TO_DATE('07-09-2015 02:03:14', 'dd-mm-yyyy hh24:mi:ss'), 'Hit by beer truck.!', 4);
   
 -- Select statements for Absenteeism table
 SELECT *
