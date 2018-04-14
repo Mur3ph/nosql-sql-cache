@@ -69,15 +69,11 @@
 2. [Book: Oracle Database 12c Backup and Recovery Survival Guide](https://www.amazon.com/Oracle-Database-Recovery-Survival-ebook/dp/B00FF1PHAW%3FSubscriptionId%3DAKIAJBDF5XQBATGDX4VQ%26tag%3Dspea06-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00FF1PHAW)
 3. [SQL Pocket Guide](http://shop.oreilly.com/product/0636920013471.do)
 4. [SQL Cookbook](http://shop.oreilly.com/product/9780596009762.do)
-5. [Linux cookbook](http://shop.oreilly.com/product/9780596006402.do)
-6. [Bash cookbook](http://shop.oreilly.com/product/9780596526788.do)
-7. [R cookbook](http://shop.oreilly.com/product/9780596809164.do)
-8. [Python cookbook](http://shop.oreilly.com/product/0636920027072.do)
-9. [Neo4j cookbook](https://www.amazon.com/gp/product/178328725X/)
-10. [Mongodb cookbook](https://www.amazon.com/MongoDB-Cookbook-Second-Cyrus-Dasadia/dp/1785289985/ref=sr_1_1?s=books&ie=UTF8&qid=1478778102&sr=1-1&keywords=Mongodb+cookbook)	
-11. [Unix for Oracle DBAs Pocket Reference](https://www.amazon.com/Unix-Oracle-DBAs-Pocket-Reference-ebook/dp/B0026OR2VS/ref=sr_1_3?s=books&ie=UTF8&qid=1478778363&sr=1-3&keywords=Oracle+dba+scripts)
-12. [Oracle books]		
-13. [Oracle documents]	
+5. [R cookbook](http://shop.oreilly.com/product/9780596809164.do)
+6. [Neo4j cookbook](https://www.amazon.com/gp/product/178328725X/)
+7. [Mongodb cookbook](https://www.amazon.com/MongoDB-Cookbook-Second-Cyrus-Dasadia/dp/1785289985/ref=sr_1_1?s=books&ie=UTF8&qid=1478778102&sr=1-1&keywords=Mongodb+cookbook)	
+8. [Unix for Oracle DBAs Pocket Reference](https://www.amazon.com/Unix-Oracle-DBAs-Pocket-Reference-ebook/dp/B0026OR2VS/ref=sr_1_3?s=books&ie=UTF8&qid=1478778363&sr=1-3&keywords=Oracle+dba+scripts)
+	
 
 
 ## Video:
