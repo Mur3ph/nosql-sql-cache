@@ -63,6 +63,13 @@
 15. [Tom's IT Pro](http://www.tomsitpro.com/)
 16. [DBA Corner](http://www.dbta.com/Columns/DBA-Corner/)
 
+
+
+## Articles
+1. [Engineers Shouldn’t Write ETL: A Guide to Building a High Functioning Data Science Department](https://multithreaded.stitchfix.com/blog/2016/03/16/engineers-shouldnt-write-etl/)
+
+
+
 ## Books:
 
 1. [Book: The Method R Guide to Mastering Oracle Trace Data, Second Edition](https://books.google.ie/books?id=f---DAEACAAJ&dq=he+Method+R+Guide+to+MASTERING+ORACLE+TRACE+DATA&hl=en&sa=X&ved=0ahUKEwj60f-qu6jQAhVoIcAKHQYQDAIQ6AEIGjAA)
