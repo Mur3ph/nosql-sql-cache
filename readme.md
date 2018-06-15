@@ -12,7 +12,8 @@
 ## Books:
 1. [Neo4j cookbook](https://www.amazon.com/gp/product/178328725X/)
 2. [Mongodb cookbook](https://www.amazon.com/MongoDB-Cookbook-Second-Cyrus-Dasadia/dp/1785289985/ref=sr_1_1?s=books&ie=UTF8&qid=1478778102&sr=1-1&keywords=Mongodb+cookbook)	
-	
+3. [MongoDB: The Definitive Guide](http://shop.oreilly.com/product/0636920001096.do)
+
 
 
 ## Video:
